@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/red"
             android:textSize="20sp"
+            android:fontFamily="@font/digital7"
             android:text="14:48:39"/>
     </LinearLayout>
 </LinearLayout>
