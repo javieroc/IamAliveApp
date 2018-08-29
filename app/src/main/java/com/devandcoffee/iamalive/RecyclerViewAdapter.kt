@@ -27,8 +27,7 @@ class RecyclerViewAdapter(val users: ArrayList<User>, val context: Context):
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bindItems(user: User) {
             itemView.user_email.text = user.email
-            itemView.user_first_name.text = user.firstName
-            itemView.user_last_name.text = user.lastName
+            itemView.user_name.text = "${user.firstName} ${user.lastName}"
         }
     }
 }

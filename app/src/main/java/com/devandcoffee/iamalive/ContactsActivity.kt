@@ -3,6 +3,7 @@ package com.devandcoffee.iamalive
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.apollographql.apollo.ApolloCall
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Response
@@ -45,6 +46,7 @@ class ContactsActivity : AppCompatActivity() {
                     override fun onResponse(response: Response<GetUsersQuery.Data>) {
                         runOnUiThread {
                             for (usersGraphql: GetUsersQuery.User in response.data()!!.users()) {
+                                Log.i("### test ###", ":${usersGraphql.email}")
                                 users.add(User(usersGraphql.email, usersGraphql.firstName, usersGraphql.lastName))
                                 contacts_list.adapter.notifyDataSetChanged()
                             }

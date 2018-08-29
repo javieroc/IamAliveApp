@@ -5,5 +5,8 @@ query GetUsers {
     lastName
     email
     phone
+    lifePoint
+    createdAt
+    updatedAt
   }
 }
